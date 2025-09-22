@@ -6,9 +6,18 @@
   </head>
   <body style="margin: 0; overflow: hidden;">
     <a-scene embedded arjs>
+      
+      <a-light type="ambient" color="#888"></a-light>
+      <a-light type="directional" intensity="0.5" position="-1 1 2"></a-light>
+
       <a-marker preset="hiro">
-        <a-plane src="logo_3d.glb" rotation="-90 0 0" height="10" width="10"></a-plane>
+        <a-gltf-model 
+            src="logo_3d.glb" 
+            rotation="-90 0 0" 
+            scale="0.5 0.5 0.5">
+        </a-gltf-model>
       </a-marker>
+      
       <a-entity camera></a-entity>
     </a-scene>
   </body>
